@@ -1,0 +1,96 @@
+<!Doctype html>
+<html>
+<head>
+<script type="text/javascript">
+function validate() {
+    //alert("Hello");
+    var x = document.forms["myForm"]["fname"].value;
+    var y = document.forms["myForm"]["lname"].value;
+    var z = document.forms["myForm"]["email"].value;
+    //alert(x);
+    for(i=0;i<x.length;i++)
+    {
+		if (x[i]>='a' && x[i]<='z') {
+        alert("Invalid: name can be upper case only");
+        return false;
+       }
+    }
+    for(i=0;i<y.length;i++)
+    {
+		if (y[i]>='a' && y[i]<='z') {
+        alert("Invalid: Last name can be upper case only");
+        return false;
+       }
+    }
+    var atpos=z.indexOf("@");
+    if(atpos<1){
+    	alert("Not a valid email");
+    	return false;
+    }
+}
+
+</script>
+<link href="css/style.css" rel="stylesheet">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<meta charset="UTF-8">
+<title> Order your free T-shirt...Exclusive for WBUT students...Hurry!!</title>
+</head>
+
+<body>
+	<form name="myForm" onsubmit="return validate()" type="POST">
+	<div align="center">
+	<div class="cardview">
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	   <div class="w3-panel w3-card" style="width:60%" id="cards">
+	   <br>
+		First Name
+		<input name="fname" type="text" maxLength="20" title="Name">
+		Last Name
+		<input name="lname" type="text" maxLength="20" title="Name">
+		<br/>
+		male
+		<input type="radio" value="male">
+		female
+		<input type="radio" value="female">
+		<br>
+	<select name="description">
+    <option value="small">Small</option>
+    <option value="medium">Medium</option>
+    <option value="large">Large</option>
+    <option value="el">Extra Large</option>
+   </select>
+   <select name="color">
+    <option value="red">Red</option>
+    <option value="green">Green</option>
+    <option value="yellow">Yellow</option>
+    <option value="black">Black</option>
+    <option value="white">White</option>
+  </select>
+  <br>
+  <br>
+     Address   <input type="text" maxLength="40">
+	<br>
+	<br>
+	  E-mail   <input name="email" type="email" maxLength="40">
+	<br>
+	<br>
+		  Phone no<input type="text" maxLength="10">
+		  <br>
+		  <br>
+		  <button value="submit" type="Submit" onClick="return validate()">Submit</button>
+		  <input type="button" value="Mail" onClick="window.location.href='mailto:utsavdas09@gmail.com';" />
+		  <button type="reset" value="Reset">Reset</button>
+		  
+	<br>
+	<br>
+		   </div>
+		  </div>
+		 </div>
+	</form>
+	
+</body>
+</html>
