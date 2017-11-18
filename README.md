@@ -1,1 +1,4 @@
-IT Lab 7th sem
+Name- Utsav Das (B.tech(IT), Final year)
+Subject- IT Lab
+Semester- 7th 
+
